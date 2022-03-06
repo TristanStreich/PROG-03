@@ -1,21 +1,26 @@
 package com.example.a160project;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.transition.TransitionInflater;
 
+import android.os.Handler;
+import android.os.Looper;
+import android.transition.Scene;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeScreen#newInstance} factory method to
+ * Use the {@link LoadingScreen#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeScreen extends Fragment {
+public class LoadingScreen extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,8 +30,9 @@ public class HomeScreen extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int delay_amount = 2000; //delay before transition to main screen. In ms
 
-    public HomeScreen() {
+    public LoadingScreen() {
         // Required empty public constructor
     }
 
@@ -36,11 +42,11 @@ public class HomeScreen extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeScreen.
+     * @return A new instance of fragment LoadingScreen.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeScreen newInstance(String param1, String param2) {
-        HomeScreen fragment = new HomeScreen();
+    public static LoadingScreen newInstance(String param1, String param2) {
+        LoadingScreen fragment = new LoadingScreen();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -56,22 +62,23 @@ public class HomeScreen extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toHomeScreen();
+            }
+        }, delay_amount);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_screen, container, false);
+        return inflater.inflate(R.layout.fragment_loading_screen, container, false);
     }
 
-    //Calling this function will send the user to the body details screen
-    private void toBodyDetailsScreen(){
-        NavHostFragment.findNavController(this).navigate(R.id.action_HomeScreen_to_BodyDetails);
-    }
-
-    //Calling this function will send the user to the exercise Selector
-    private void toExerciseSelector(){
-        NavHostFragment.findNavController(this).navigate(R.id.action_HomeScreen_to_ExerciseSelector);
+    private void toHomeScreen(){
+        NavHostFragment.findNavController(this).navigate(R.id.action_loadingScreen_to_HomeScreen);
     }
 }

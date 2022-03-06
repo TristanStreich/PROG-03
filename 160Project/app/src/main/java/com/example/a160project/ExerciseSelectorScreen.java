@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -67,5 +68,14 @@ public class ExerciseSelectorScreen extends Fragment {
             recyclerView.setAdapter(new MyExercisesRecyclerViewAdapter(PlaceholderContent.ITEMS));
         }
         return view;
+    }
+
+    //Calling this function will send the user to the home screen
+    private void toHomeScreen(){
+        NavHostFragment.findNavController(this).navigate(R.id.action_ExerciseSelector_to_HomeScreen);
+    }
+    //Calling this function will send the user to the running screen
+    private void toRunningScreen(){
+        NavHostFragment.findNavController(this).navigate(R.id.action_ExerciseSelector_to_RunningScreen);
     }
 }

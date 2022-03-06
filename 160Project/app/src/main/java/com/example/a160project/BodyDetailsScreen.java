@@ -3,6 +3,7 @@ package com.example.a160project;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,5 +61,10 @@ public class BodyDetailsScreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_body_details_screen, container, false);
+    }
+
+    //Calling this function will send the user to the home screen
+    private void toHomeScreen(){
+        NavHostFragment.findNavController(this).navigate(R.id.action_BodyDetails_to_HomeScreen);
     }
 }
