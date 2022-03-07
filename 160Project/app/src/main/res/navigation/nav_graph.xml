@@ -80,18 +80,5 @@
             app:popExitAnim="@anim/slide_out"/>
 
     </fragment>
-    <fragment
-        android:id="@+id/loadingScreen"
-        android:name="com.example.a160project.LoadingScreen"
-        android:label="@string/loading_screen_label"
-        tools:layout="@layout/fragment_loading_screen" >
-        <action
-            android:id="@+id/action_loadingScreen_to_HomeScreen"
-            app:destination="@id/HomeScreen"
-            app:enterAnim="@anim/slide_in"
-            app:exitAnim="@anim/fade_out"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/slide_out" />
-    </fragment>
 
 </navigation>
