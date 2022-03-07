@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2435" />
+        <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/drawable/ic_baseline_directions_run_24.xml" value="0.184" />
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184" />
+        <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/drawable/splash_screen.xml" value="0.184" />
+        <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/activity_app.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/content_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/content_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/fragment_body_details_screen.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Trist/cs160/prog03/160Project/app/src/main/res/layout/fragment_exercise_selector_screen.xml" value="0.25052083333333336" />
