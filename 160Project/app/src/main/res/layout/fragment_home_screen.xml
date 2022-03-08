@@ -251,7 +251,14 @@
         android:textAppearance="@style/walk"
         android:gravity="top"
         />
-
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="98dp"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/circle" />
     <!-- 8104 -->
     <TextView
         android:id="@+id/walkNum"
@@ -277,7 +284,14 @@
         android:gravity="top"
         android:text="@string/steps"
         android:textAppearance="@style/minutes" />
-
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="98dp"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/circle" />
     <!-- 23 -->
     <TextView
         android:id="@+id/runNum"
@@ -304,6 +318,14 @@
         android:text="@string/steps"
         android:textAppearance="@style/minutes" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="98dp"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/circle" />
     <!-- 2 -->
     <TextView
         android:id="@+id/bikeNum"
@@ -382,4 +404,6 @@
         android:gravity="top"
         android:text="@string/bodyDetails"
         android:textAppearance="@style/start_recor" />
+
+
 </FrameLayout>
