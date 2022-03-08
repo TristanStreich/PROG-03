@@ -15,4 +15,28 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_chi">Welcome,\nChithra Anand!</string>
+    <string name="this_past_w">This past week...</string>
+    <string name="saturday">Saturday</string><string name="september">25 September</string>
+    <string name="you_spent">You spent</string>
+    <string name="and_burned">And burned</string>
+    <string name="some_id">240</string>
+    <string name="minutes">Minutes</string>
+    <string name="num">537</string>
+    <string name="cals">Calories</string>
+    <string name="your_activi">Your activities were...</string>
+    <string name="walk">Walk</string>
+    <string name="run">Run</string>
+    <string name="bike">Bike</string>
+    <string name="walkNum">8104</string>
+    <string name="steps">Steps</string>
+    <string name="runNum">23</string>
+    <string name="bikeNum">2</string>
+    <string name="miles">Miles</string>
+
+
+
+
+
+
 </resources>
