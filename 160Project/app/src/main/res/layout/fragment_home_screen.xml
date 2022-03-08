@@ -99,7 +99,7 @@
     <View
         android:id="@+id/activities"
         android:layout_width="368dp"
-        android:layout_height="157dp"
+        android:layout_height="188dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="25dp"
@@ -335,5 +335,51 @@
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:src="@drawable/circle" />-->
+    <!-- Rectangle 3 -->
+    <View
+        android:id="@+id/rectangle_3"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="550dp"
+        android:background="@drawable/rectangle_3" />
 
+    <!-- Start recording new activity -->
+    <TextView
+        android:id="@+id/start_recor"
+        android:layout_width="307dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="560dp"
+        android:gravity="top"
+        android:text="@string/start_recor"
+        android:textAppearance="@style/start_recor" />
+
+    <!-- Rectangle 4 -->
+    <View
+        android:id="@+id/rectangle_4"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/rectangle_3" />
+
+    <!-- Enter your body details -->
+    <TextView
+        android:id="@+id/bodyDetails"
+        android:layout_width="307dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="630dp"
+        android:gravity="top"
+        android:text="@string/bodyDetails"
+        android:textAppearance="@style/start_recor" />
 </FrameLayout>
