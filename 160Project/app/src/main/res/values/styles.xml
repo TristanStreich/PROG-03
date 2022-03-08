@@ -158,7 +158,14 @@
         </item>
 
     </style>
+    <style name="start_recor">
 
+        <item name="android:textSize">
+            20sp
+        </item>
 
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
 
-</resources>
+    </style>
