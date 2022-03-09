@@ -412,5 +412,13 @@
         android:theme="@style/Theme.160Project"
         android:text="To Body Details" />
 
+    <Button
+        android:id="@+id/ExerciseSelectorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:theme="@style/Theme.160Project"
+        android:text="To Exercise Details" />
+
 
 </FrameLayout>
