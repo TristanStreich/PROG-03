@@ -9,24 +9,14 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView2"
-        android:layout_width="371dp"
-        android:layout_height="326dp"
-        android:contentDescription="@string/map_label"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="70dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/record"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/record" />
@@ -38,9 +28,9 @@
         android:layout_marginTop="16dp"
         android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <View
         android:id="@+id/view7"
@@ -70,123 +60,153 @@
         android:id="@+id/imageView2"
         android:layout_width="144dp"
         android:layout_height="52dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/calories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="620dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="144dp"
         android:layout_height="52dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/calories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="620dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="243dp"
         android:layout_height="68dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintTop_toTopOf="@+id/view6" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/cals"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="519dp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6"
         tools:text="@string/cals" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/miles_dist"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="601dp"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7"
         tools:text="@string/miles_dist" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/step_dist"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="601dp"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/view8"
         tools:text="@string/step_dist" />
 
     <TextView
         android:id="@+id/calories_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="353dp"
-        tools:layout_editor_absoluteY="508dp"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6"
         tools:text="0" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text="TextView"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/lower_cals"
         android:textColor="@color/light_gray"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="538dp"
+        app:layout_constraintTop_toTopOf="@+id/view6"
         tools:text="@string/lower_cals" />
 
     <TextView
         android:id="@+id/miles_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="TextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/default_distance"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="46dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
         tools:text="@string/default_distance" />
 
     <TextView
         android:id="@+id/steps_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/default_step_distance"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="684dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view8"
+        app:layout_constraintStart_toStartOf="@+id/view8"
         tools:text="@string/default_step_distance" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/miles"
         android:textColor="@color/light_gray"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="689dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
         tools:text="@string/miles" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/steps"
         android:textColor="@color/light_gray"
-        tools:layout_editor_absoluteX="292dp"
-        tools:layout_editor_absoluteY="684dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view8"
+        app:layout_constraintEnd_toEndOf="@+id/view8"
         tools:text="@string/steps" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="373dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
