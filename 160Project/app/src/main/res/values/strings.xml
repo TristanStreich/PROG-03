@@ -35,5 +35,12 @@
     <string name="miles">Miles</string>
     <string name="start_recor">Start recording new activity</string>
     <string name="bodyDetails">Enter your body details</string>
+    <string name="miles_dist">Miles Distance</string>
+    <string name="step_dist">Step Distance</string>
+    <string name="lower_cals">calories</string>
+    <string name="default_distance">0.0</string>
+    <string name="default_step_distance">0</string>
+    <string name="record">RECORD</string>
+    <string name="stop">STOP</string>
 
 </resources>

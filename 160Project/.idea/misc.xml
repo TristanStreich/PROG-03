@@ -27,7 +27,7 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1656534954407295" />
         <entry key="app/src/main/res/layout/fragment_body_details_screen.xml" value="0.1656534954407295" />
         <entry key="app/src/main/res/layout/fragment_exercise_selector_screen.xml" value="0.1656534954407295" />
-        <entry key="app/src/main/res/layout/fragment_home_screen.xml" value="0.1656534954407295" />
+        <entry key="app/src/main/res/layout/fragment_home_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_running_screen.xml" value="0.33" />
       </map>
     </option>
