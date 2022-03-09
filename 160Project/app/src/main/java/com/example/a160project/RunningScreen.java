@@ -18,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Use the {@link RunningScreen#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RunningScreen extends Fragment {
+public class RunningScreen extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,51 +66,11 @@ public class RunningScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_running_screen, container, false);
+        Button record = (Button) v.findViewById(R.id.button);
 
-//        this.incrementMetricsThread = new Thread(new Runnable() {
-//            public void run() {
-//                int calories = 0;
-//                double miles = 0.0;
-//                int steps = 0;
-//
-//                TextView calories_text = getView().findViewById(R.id.calories_counter);
-//                TextView miles_text = getView().findViewById(R.id.miles_counter);
-//                TextView steps_text = getView().findViewById(R.id.steps_counter);
-//
-//                calories_text.setText(Integer.toString(calories));
-//                miles_text.setText(String.format("%.2f", miles));
-//                steps_text.setText(Integer.toString(steps));
-//
-//                while (true) {
-//                    try {
-//                        TimeUnit.SECONDS.sleep(1); // Sleeps the thread for five seconds
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                    calories += randInt(1, 10);
-//                    miles += randDouble(0, 0.1);
-//                    steps += 1;
-//
-//                    calories_text.setText(Integer.toString(calories));
-//                    miles_text.setText(String.format("%.2f", miles));
-//                    steps_text.setText(Integer.toString(steps));
-//                }
-//
-//            }
-//        });
-//
-//        View view = inflater.inflate(R.layout.fragment_running_screen,
-//                container, false);
-//
-//        Button record = view.findViewById(R.id.button);
-//
-//        record.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startRun(view);
-//            }
-//        });
-        return inflater.inflate(R.layout.fragment_running_screen, container, false);
+        record.setOnClickListener(this);
+        return v;
     }
 
     public static int randInt(int min, int max) {
@@ -121,36 +81,63 @@ public class RunningScreen extends Fragment {
         return min + Math.random() * (max - min);
     }
 
-//    public void startRun(View view) {
-//        Button record = getView().findViewById(R.id.button);
-//
-//        String stop_text = getResources().getString(R.string.stop);
-//        record.setText(stop_text);
-//
-//        this.incrementMetricsThread.start();
-//
-//        record.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                stopRun(view);
-//            }
-//        });
-//    }
-//
-//    public void stopRun(View view) {
-//        Button stop = getView().findViewById(R.id.button);
-//
-//        String record_text = getResources().getString(R.string.record);
-//        stop.setText(record_text);
-//
-//        this.incrementMetricsThread.interrupt();
-//        stop.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startRun(view);
-//            }
-//        });
-//    }
+    public void startRun() {
+        Button record = getView().findViewById(R.id.button);
+
+        String stop_text = getResources().getString(R.string.stop);
+        record.setText(stop_text);
+
+        int calories = 89;
+        double miles = 0.8;
+        int steps = 826;
+
+        TextView calories_text = getView().findViewById(R.id.calories_counter);
+        TextView miles_text = getView().findViewById(R.id.miles_counter);
+        TextView steps_text = getView().findViewById(R.id.steps_counter);
+
+        calories_text.setText(Integer.toString(calories));
+        miles_text.setText(String.format("%.2f", miles));
+        steps_text.setText(Integer.toString(steps));
+
+        record.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopRun();
+            }
+        });
+    }
+
+    public void stopRun() {
+        Button stop = getView().findViewById(R.id.button);
+
+        String record_text = getResources().getString(R.string.record);
+        stop.setText(record_text);
+
+        int calories = 0;
+        double miles = 0.0;
+        int steps = 0;
+
+        TextView calories_text = getView().findViewById(R.id.calories_counter);
+        TextView miles_text = getView().findViewById(R.id.miles_counter);
+        TextView steps_text = getView().findViewById(R.id.steps_counter);
+
+        calories_text.setText(Integer.toString(calories));
+        miles_text.setText(String.format("%.2f", miles));
+        steps_text.setText(Integer.toString(steps));
+
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startRun();
+            }
+        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        startRun();
+    }
+
 
     //Calling this function will send the user to the home screen
     private void toHomeScreen(){
