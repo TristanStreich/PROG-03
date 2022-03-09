@@ -61,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
 ////                navController.navigate(R.id.return_to_HomeScreen);
 //            }
 //        });
+//        Button record = findViewById(R.id.button);
+//
+//        record.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startRun(view);
+//            }
+//        });
     }
 
     @Override
