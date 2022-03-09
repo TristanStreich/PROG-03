@@ -1,5 +1,6 @@
 package com.example.a160project;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import androidx.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,14 +57,22 @@ public class HomeScreen extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_screen, container, false);
+        View v = inflater.inflate(R.layout.fragment_home_screen, container, false);
+        Button toBodyDetails = (Button) v.findViewById(R.id.bodyDetailsButton);
+
+        toBodyDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toBodyDetailsScreen();
+            }
+        });
+        return v;
     }
 
     //Calling this function will send the user to the body details screen
