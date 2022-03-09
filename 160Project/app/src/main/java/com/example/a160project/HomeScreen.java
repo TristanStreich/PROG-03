@@ -65,7 +65,7 @@ public class HomeScreen extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home_screen, container, false);
 
-        Button toBodyDetails = (Button) v.findViewById(R.id.bodyDetailsButton);
+        View toBodyDetails = v.findViewById(R.id.bodyDetailsRectangle);
         toBodyDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +73,7 @@ public class HomeScreen extends Fragment {
             }
         });
 
-        Button toExerciseSelector = (Button) v.findViewById(R.id.ExerciseSelectorButton);
+        View toExerciseSelector = v.findViewById(R.id.exerciseSelectorRectangle);
         toExerciseSelector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

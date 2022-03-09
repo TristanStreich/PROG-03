@@ -359,7 +359,7 @@
 <!--        android:src="@drawable/circle" />-->
     <!-- Rectangle 3 -->
     <View
-        android:id="@+id/rectangle_3"
+        android:id="@+id/exerciseSelectorRectangle"
         android:layout_width="366dp"
         android:layout_height="46dp"
         android:layout_alignParentLeft="true"
@@ -383,7 +383,7 @@
 
     <!-- Rectangle 4 -->
     <View
-        android:id="@+id/rectangle_4"
+        android:id="@+id/bodyDetailsRectangle"
         android:layout_width="366dp"
         android:layout_height="46dp"
         android:layout_alignParentLeft="true"
@@ -404,21 +404,21 @@
         android:gravity="top"
         android:text="@string/bodyDetails"
         android:textAppearance="@style/start_recor" />
+    
+<!--    <Button-->
+<!--        android:id="@+id/bodyDetailsButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/Theme.160Project"-->
+<!--        android:text="To Body Details" />-->
 
-    <Button
-        android:id="@+id/bodyDetailsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.160Project"
-        android:text="To Body Details" />
-
-    <Button
-        android:id="@+id/ExerciseSelectorButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:theme="@style/Theme.160Project"
-        android:text="To Exercise Details" />
+<!--    <Button-->
+<!--        android:id="@+id/ExerciseSelectorButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:theme="@style/Theme.160Project"-->
+<!--        android:text="To Exercise Details" />-->
 
 
 </FrameLayout>
