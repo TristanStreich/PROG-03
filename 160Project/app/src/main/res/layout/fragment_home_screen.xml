@@ -16,68 +16,28 @@
 
     <View
         android:id="@+id/spent"
-        android:layout_width="185dp"
-        android:layout_height="195dp"
+        android:layout_width="175dp"
+        android:layout_height="190dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="152dp"
-        android:background="#000000"
+        android:background="@color/dark_navy"
         app:layout_constraintEnd_toStartOf="@+id/spent2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/spent2" />
 
     <View
         android:id="@+id/spent2"
-        android:layout_width="179dp"
-        android:layout_height="195dp"
+        android:layout_width="175dp"
+        android:layout_height="190dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="384dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="152dp"
+        android:background="@color/dark_navy"
+        app:layout_constraintEnd_toEndOf="@+id/spent3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent" />
-
-    <View
-        android:id="@+id/spent3"
-        android:layout_width="364dp"
-        android:layout_height="217dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="363dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/exerciseSelectorRectangle"
-        android:layout_width="366dp"
-        android:layout_height="46dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="599dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rectangle_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/bodyDetailsRectangle"
-        android:layout_width="366dp"
-        android:layout_height="46dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="660dp"
-        android:background="@drawable/rectangle_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Saturday -->
@@ -89,6 +49,46 @@
 
     <!-- 240 -->
 
+    <View
+        android:id="@+id/spent3"
+        android:layout_width="364dp"
+        android:layout_height="217dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:background="@color/dark_navy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spent2" />
+
+    <View
+        android:id="@+id/exerciseSelectorRectangle"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spent3"
+        app:layout_constraintVertical_bias="0.209" />
+
+    <View
+        android:id="@+id/bodyDetailsRectangle"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseSelectorRectangle" />
+
     <TextView
         android:id="@+id/welcome_chi"
         android:layout_width="wrap_content"
@@ -98,8 +98,6 @@
         android:gravity="top"
         android:text="@string/welcome_chi"
         android:textAppearance="@style/welcome_chi"
-        app:layout_constraintEnd_toStartOf="@+id/calendar"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,45 +114,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="120dp"
-        android:background="#00000000"
-        android:src="@android:drawable/ic_menu_my_calendar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/saturday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:gravity="top"
-        android:text="@string/saturday"
-        android:textAppearance="@style/saturday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/september"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="302dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="top"
-        android:text="@string/september"
-        android:textAppearance="@style/september"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <!-- Minutes -->
     <!-- 537 -->
     <!-- Calories -->
@@ -162,98 +121,112 @@
 
     <!-- Walk -->
 
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintEnd_toStartOf="@+id/saturday"
+        app:layout_constraintTop_toTopOf="@+id/saturday" />
+
+    <TextView
+        android:id="@+id/saturday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:gravity="top"
+        android:text="@string/saturday"
+        android:textAppearance="@style/saturday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/september"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="@string/september"
+        android:textAppearance="@style/september"
+        app:layout_constraintStart_toStartOf="@+id/saturday"
+        app:layout_constraintTop_toBottomOf="@+id/saturday" />
+
     <TextView
         android:id="@+id/you_spent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="16dp"
         android:gravity="top"
         android:text="@string/you_spent"
         android:textAppearance="@style/you_spent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/spent"
+        app:layout_constraintTop_toTopOf="@+id/spent" />
 
     <TextView
         android:id="@+id/and_burned"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="63dp"
+        android:layout_marginTop="16dp"
         android:gravity="top"
         android:text="@string/and_burned"
         android:textAppearance="@style/and_burned"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/spent2"
+        app:layout_constraintTop_toTopOf="@+id/spent2" />
 
     <TextView
         android:id="@+id/some_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="2dp"
         android:gravity="top"
         android:text="@string/some_id"
         android:textAppearance="@style/some_id"
-        app:layout_constraintEnd_toStartOf="@+id/spent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent"
+        app:layout_constraintStart_toStartOf="@+id/spent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/minutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="407dp"
         android:gravity="top"
         android:text="@string/minutes"
         android:textAppearance="@style/minutes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent"
+        app:layout_constraintStart_toStartOf="@+id/spent"
+        app:layout_constraintTop_toBottomOf="@+id/some_id" />
 
     <TextView
         android:id="@+id/num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
         android:gravity="top"
         android:text="@string/num"
         android:textAppearance="@style/some_id"
-        app:layout_constraintEnd_toStartOf="@+id/spent2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent2"
+        app:layout_constraintStart_toStartOf="@+id/spent2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <TextView
         android:id="@+id/cals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
         android:gravity="top"
         android:text="@string/cals"
         android:textAppearance="@style/minutes"
-        app:layout_constraintEnd_toStartOf="@+id/spent2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent2"
+        app:layout_constraintStart_toStartOf="@+id/spent2"
+        app:layout_constraintTop_toBottomOf="@+id/num" />
 
     <!-- Run -->
     <!-- Bike -->
 
     <!-- 8104 -->
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="129dp"
-        android:layout_height="66dp"
-        android:src="@drawable/calories"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
 
     <!-- Steps -->
 
@@ -264,74 +237,78 @@
     <!-- 2 -->
 
     <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="129dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/calories"
+        app:layout_constraintEnd_toEndOf="@+id/spent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/spent"
+        app:layout_constraintTop_toTopOf="@+id/spent" />
+
+    <ImageView
         android:id="@+id/imageView6"
         android:layout_width="116dp"
         android:layout_height="66dp"
-        android:layout_marginTop="202dp"
+        android:layout_marginTop="48dp"
         android:src="@drawable/time"
-        app:layout_constraintEnd_toStartOf="@+id/spent2"
+        app:layout_constraintEnd_toEndOf="@+id/spent2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spent2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/spent2"
+        app:layout_constraintTop_toTopOf="@+id/spent2" />
 
     <TextView
         android:id="@+id/your_activi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="top"
         android:text="@string/your_activi"
         android:textAppearance="@style/your_activi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintEnd_toEndOf="@+id/spent3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/spent3" />
 
     <TextView
         android:id="@+id/walk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="48dp"
         android:gravity="top"
         android:text="@string/walk"
         android:textAppearance="@style/walk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent3"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/spent3" />
 
     <TextView
         android:id="@+id/run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="48dp"
         android:gravity="top"
         android:text="@string/run"
         android:textAppearance="@style/walk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent3"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/spent3" />
 
     <TextView
         android:id="@+id/bike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="297dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="48dp"
         android:gravity="top"
         android:text="@string/bike"
         android:textAppearance="@style/walk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/circle1"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="456dp"
-        android:src="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spent3"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/spent3" />
 
     <!-- Miles -->
 
@@ -348,121 +325,132 @@
 
     <!-- Enter your body details -->
 
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="105dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/circle"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle2"
+        app:layout_constraintTop_toTopOf="@+id/spent3" />
+
     <TextView
         android:id="@+id/steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
         android:gravity="top"
         android:text="@string/steps"
         android:textAppearance="@style/minutes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/circle1"
+        app:layout_constraintStart_toStartOf="@+id/circle1"
+        app:layout_constraintTop_toBottomOf="@+id/runNum" />
 
     <ImageView
         android:id="@+id/circle2"
         android:layout_width="105dp"
         android:layout_height="87dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="457dp"
         android:src="@drawable/circle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/circle1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spent3"
+        app:layout_constraintTop_toTopOf="@+id/circle1" />
 
     <TextView
         android:id="@+id/runNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
+        android:layout_marginTop="12dp"
         android:gravity="top"
         android:text="@string/runNum"
         android:textAppearance="@style/some_id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/circle1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle1"
+        app:layout_constraintTop_toTopOf="@+id/circle1" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="110dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="453dp"
+        android:layout_width="105dp"
+        android:layout_height="87dp"
         android:src="@drawable/circle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/spent3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle1"
+        app:layout_constraintTop_toTopOf="@+id/circle1" />
 
     <TextView
         android:id="@+id/walkNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="467dp"
+        android:layout_marginTop="12dp"
         android:gravity="top"
         android:text="@string/walkNum"
         android:textAppearance="@style/some_id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/circle2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle2"
+        app:layout_constraintTop_toTopOf="@+id/circle2" />
 
     <TextView
         android:id="@+id/steps2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="499dp"
         android:gravity="top"
         android:text="@string/steps"
         android:textAppearance="@style/minutes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/circle2"
+        app:layout_constraintStart_toStartOf="@+id/circle2"
+        app:layout_constraintTop_toBottomOf="@+id/walkNum" />
 
     <TextView
         android:id="@+id/bikeNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="306dp"
-        android:layout_marginBottom="232dp"
+        android:layout_marginTop="12dp"
         android:gravity="top"
         android:text="@string/bikeNum"
         android:textAppearance="@style/some_id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <TextView
         android:id="@+id/miles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="499dp"
         android:gravity="top"
         android:text="@string/miles"
         android:textAppearance="@style/minutes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/circle1"
+        app:layout_constraintTop_toBottomOf="@+id/bikeNum" />
 
     <TextView
         android:id="@+id/start_recor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginTop="8dp"
         android:gravity="top"
         android:text="@string/start_recor"
         android:textAppearance="@style/start_recor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/exerciseSelectorRectangle" />
 
     <TextView
         android:id="@+id/bodyDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="37dp"
+        android:layout_marginTop="8dp"
         android:gravity="top"
         android:text="@string/bodyDetails"
         android:textAppearance="@style/start_recor"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bodyDetailsRectangle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
