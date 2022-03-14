@@ -54,13 +54,33 @@ public class ExerciseSelectorScreen extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exercise_selector_screen, container, false);
+        View v = inflater.inflate(R.layout.fragment_exercise_selector_screen, container, false);
+
+        View toBodyDetails = v.findViewById(R.id.button);
+        toBodyDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toRunningScreen();
+            }
+        });
+
+        View toHome = v.findViewById(R.id.imageButton2);
+        toHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHomeScreen();
+            }
+        });
+
+        return v;
+
     }
 
 

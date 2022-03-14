@@ -60,7 +60,18 @@ public class BodyDetailsScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_body_details_screen, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_body_details_screen, container, false);
+
+        View toHome = v.findViewById(R.id.imageButton);
+        toHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHomeScreen();
+            }
+        });
+
+        return v;
     }
 
     //Calling this function will send the user to the home screen

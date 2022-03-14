@@ -43,4 +43,12 @@
     <string name="record">RECORD</string>
     <string name="stop">STOP</string>
 
+    <string name="input_stats">Input your stats...</string>
+    <string name="run_option">Running</string>
+    <string name="bike_option">Biking</string>
+    <string name="row_option">Rowing</string>
+    <string name="freeweight_option">Free Weights</string>
+    <string name="stair_option">Stair Climbing</string>
+    <string name="age_entry">Enter your age here</string>
+    <string name="back_button">Back</string>
 </resources>
